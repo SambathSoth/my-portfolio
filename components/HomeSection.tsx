@@ -15,13 +15,13 @@ function HomeSection() {
                 {/* Left Side: Self Information */}
                 <div className="flex flex-col items-center justify-center space-y-2 sm:items-start">
                     <h1 className="text-xl font-bold text-slate-900 text-center sm:text-start sm:text-2xl lg:text-4xl">
-                        Hi, I'm Sambath Soth,
+                        Hi, I&apos;m Sambath Soth,
                     </h1>
                     <h1 className="text-xl font-bold text-slate-900 text-center sm:text-start sm:text-2xl lg:text-4xl">
-                        I'm a full-stack developer.
+                        I&apos;m a full-stack developer.
                     </h1>
                     <p className="text-xs pt-5 text-gray-600 text-center sm:pt-8 sm:text-start sm:text-sm">
-                        I'm a full-stack developer based in Phnom Penh,
+                        I&apos;m a full-stack developer based in Phnom Penh,
                         Cambodia. I have a passion for web development and love
                         to create for web and mobile devices.
                     </p>

@@ -48,7 +48,7 @@ function Header() {
                     className="hidden group sm:flex items-center transform transition-transform duration-500 hover:-translate-x-5 "
                 >
                     <span className="mr-4 underline decoration-2 font-semibold transition duration-500 ease-in-out group-hover:no-underline ">
-                        Let's Talk
+                        Let&apos;s Talk
                     </span>
                     <FaArrowRight className="transform rotate-0 transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 animate-bounce-x" />
                 </button>
@@ -69,7 +69,7 @@ function Header() {
                     <NavItem name="Home" target="/" />
                     <NavItem name="Experience" target="/" />
                     <div onClick={() => setIsShowContactPopup(true)}>
-                        <NavItem name="Let's Talk" target="/" />
+                        <NavItem name="Let&apos;s Talk" target="/" />
                     </div>
                 </div>
             )}

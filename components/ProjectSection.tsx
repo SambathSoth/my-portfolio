@@ -9,7 +9,7 @@ function ProjectSection() {
                     My Projects
                 </h1>
                 <p className="text-xs sm:text-sm ml-2 text-gray-600">
-                    What I've been working on
+                    What I&apos;ve been working on
                 </p>
             </div>
 

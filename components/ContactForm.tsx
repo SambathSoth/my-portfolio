@@ -25,16 +25,16 @@ function ContactForm() {
                     isShowContactPopup
                         ? "translate-y-0 opacity-100"
                         : "-translate-y-full opacity-0"
-                } `}
+                }`}
             >
                 {/* Title */}
-                <h1 className="text-3xl font-bold text-slate-900 mb-2 pt-5 sm:mt-">
-                    Let's Talk!
+                <h1 className="text-3xl font-bold text-slate-900 mb-2 pt-5 sm:mt-5">
+                    Let&apos;s Talk!
                 </h1>
                 {/* Description */}
                 <p className="text-sm text-gray-600 mb-10">
-                    I'm always open to discuss your project, or just to chat.
-                    Feel free to drop me a message!
+                    I&apos;m always open to discuss your project, or just to
+                    chat. Feel free to drop me a message!
                 </p>
 
                 {/* Form */}
