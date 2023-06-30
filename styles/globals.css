@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,31 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@layer components {
+    /* Menu Button Animation */
+    .menu-button {
+        @apply bg-transparent border-none cursor-pointer flex flex-col justify-between items-end space-y-[4px] py-1 w-6 transition-all duration-300;
+    }
+
+    .menu-button .menu-line {
+        @apply bg-black h-[2px] transition-transform duration-300 w-full;
+    }
+
+    .menu-button .menu-line:nth-child(3) {
+        @apply w-4;
+    }
+
+    .menu-button.open .menu-line:nth-child(1) {
+        @apply transform translate-y-[6px] rotate-45 bg-gray-600;
+    }
+
+    .menu-button.open .menu-line:nth-child(2) {
+        @apply transform opacity-0;
+    }
+
+    .menu-button.open .menu-line:nth-child(3) {
+        @apply transform w-full -translate-y-[6px] -rotate-45 bg-gray-600;
+    }
 }
