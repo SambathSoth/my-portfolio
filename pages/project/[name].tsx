@@ -102,6 +102,7 @@ export async function getStaticPaths() {
     return {
         paths: [
             { params: { name: "jolmer" } },
+            { params: { name: "napt" } },
             { params: { name: "odoo" } },
             { params: { name: "attendance-system" } },
         ],

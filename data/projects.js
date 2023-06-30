@@ -49,13 +49,13 @@ const projects = [
         image: "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fspring-boot-jwt-auth%2Fspring-boot-jwt-auth-project-banner.png?alt=media",
         projectLink:
             "https://github.com/SambathSoth/Spring-Boot-Security-OAuth2-Social-Login-and-JWT",
-        completed: false,
+        completed: true,
     },
     {
         id: 3,
         title: "Shopen - Marketplace",
         name: "shopen",
-        summary: `Shopen is a web application that allows users to buy and sell products online that I've build with my friends. The users can easily search for products with the Search Product by AI feature. We still keep improving the application to make it better. The application is built with Next.js, Django REST Framework, and PostgreSQL. The application is deployed using Docker on AWS EC2, AWS S3, and AWS RDS.`,
+        summary: `Shopen is a web application that aims to help both sellers and buyers to build trust between each other. The users can easily search for products with the Search Product by AI feature. We still keep improving the application to make it better. The application is built with Next.js, Django REST Framework, and PostgreSQL. The application is deployed using Docker on AWS EC2, AWS S3, and AWS RDS.`,
         description: [],
         screenshots: [],
         technologies: [
@@ -71,6 +71,38 @@ const projects = [
     },
     {
         id: 4,
+        title: "NAPT - eKYC Solution",
+        name: "napt",
+        summary: `NAPT is a eKYC service that I've built with my team during the Innovative Business Idea Competition 2021 called Reverse Innovator. I've implemented  an  API  integration  system  with  eKYC  processes,  including
+        document and face verification, and optical character recognition (OCR) in both Khmer and English languages. We utilized  OpenCV  and  Tesseract  for  OCR,  and  integrated  third-party services  such  as  Huawei  Face  Recognition  for  face  detection  & recognition and Django REST Framework for API integration.
+        `,
+        description: [
+            `NAPT is an eKYC (Electronic Know Your Customer) service that I built with my team during the Innovative Business Idea Competition 2021 called Reverse Innovator. This eKYC solution aims to solve the normal process of onboarding the customer by using the process wherein the customer's identity and address are verified electronically instead.`,
+            `I've implemented an  API  integration system with eKYC processes,  including document and face verification, and optical character recognition (OCR) in both Khmer and English languages. We also utilized  OpenCV and  Tesseract for  OCR and integrated third-party services such as  Huawei  Face  Recognition for face detection  & recognition and Django REST Framework for API integration. I've designed the whole system architecture and also API documentation.`,
+            `This project is really challenging for me as it has a lot of new technologies involved. As a result, we have been selected as the Top 3 team in the competition among more than 100 team participants. This is one of my proudest experiences and achievements for me.`,
+        ],
+        screenshots: [
+            "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fnapt%2Fscreenshot_1.jpg?alt=media",
+            "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fnapt%2Fscreenshot_2.png?alt=media",
+            "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fnapt%2Fscreenshot_3.png?alt=media",
+            "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fnapt%2Fscreenshot_4.png?alt=media",
+        ],
+        technologies: [
+            "Django REST Framework",
+            "OpenCV",
+            "Tesseract",
+            "Huawei Face Recognition",
+            "AWS EC2",
+            "AWS S3",
+            "AWS RDS",
+            "PostgreSQL",
+        ],
+        image: "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fnapt%2Fnapt-project-banner.png?alt=media",
+        projectLink: "",
+        completed: true,
+    },
+    {
+        id: 5,
         title: "VR Dart Backend - VR Game",
         name: "vr-dart",
         summary: `VR Dart is a VR game that I've worked as a backend developer. The game is built with Unity and the backend is built with Node.js, Express, and MongoDB. The game published on SideQuest.`,
@@ -84,10 +116,10 @@ const projects = [
         image: "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fvr-dart%2Fvr-dart-project-banner.png?alt=media",
         projectLink:
             "https://sidequestvr.com/app/7050/vr-dart-your-legendary-game",
-        completed: false,
+        completed: true,
     },
     {
-        id: 5,
+        id: 6,
         title: "Odoo Application - ERP System",
         name: "odoo",
         summary: `I've worked with my team to build an ERP system for internal company usage. I've built more than 10 custom modules for the company including Accounting, Sales, Inventory, Hotel Management and Point of Sale. The application is being used by more than 100 employees in the company.`,
@@ -114,15 +146,15 @@ const projects = [
             "PostgreSQL",
         ],
         image: "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fodoo%2Fodoo-project-banner.png?alt=media",
-        completed: false,
+        completed: true,
     },
     {
-        id: 6,
+        id: 7,
         title: "Temperature & Attendance System",
         name: "attendance-system",
         summary: `I've worked with my team to build a portable system to detect face and temperature for internal school usage at KIT. We've built a mobile app and a web dashboard to manage the system using Java, Django REST Framework, Vue.js, and PostgreSQL.`,
         description: [
-            `I've worked with my team to build a portable system to detect face and temperature for internal school usage at KIT during the COVID-19 pandemic.`,
+            `The temperature & Attendance System is a portable system to detect faces and temperature during the COVID-19 pandemic by utilizing a mobile phone for face detection and a thermal camera for temperature detection.`,
             `We've built a mobile application and web dashboard with AI technology for face detection and recognition, and a Thermal Camera for temperature detection.`,
             `The system being used by more than 100 students and teachers in the school.`,
         ],
@@ -145,10 +177,10 @@ const projects = [
             "FaceNet",
         ],
         image: "https://firebasestorage.googleapis.com/v0/b/empmanager.appspot.com/o/projects%2Fattendance-system%2Fattendance-system-project-banner.png?alt=media",
-        completed: false,
+        completed: true,
     },
     {
-        id: 7,
+        id: 8,
         title: "Music Player - Android App",
         name: "music-app",
         summary: `I've built a music player app playing in the background for Android devices. The app is built with Java and Android Studio. The app allows users to listen to music offine.`,
