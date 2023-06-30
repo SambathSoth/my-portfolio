@@ -33,9 +33,28 @@ function Footer() {
 
                 {/* Social Media */}
                 <div className="flex justify-between items-center space-x-8 mt-10 lg:space-x-10 lg:mt-16">
-                    <VscGithub className="w-5 h-5 text-gray-60 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
-                    <CiLinkedin className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
-                    <CiFacebook className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
+                    <VscGithub
+                        onClick={() =>
+                            window.open("https://github.com/SambathSoth")
+                        }
+                        className="w-5 h-5 text-gray-60 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 sm:w-6 sm:h-6 lg:w-7 lg:h-7"
+                    />
+                    <CiLinkedin
+                        onClick={() =>
+                            window.open(
+                                "https://www.linkedin.com/in/sambath-soth-10a2a71ba/"
+                            )
+                        }
+                        className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
+                    />
+                    <CiFacebook
+                        onClick={() =>
+                            window.open(
+                                "https://www.facebook.com/sambath.successful/"
+                            )
+                        }
+                        className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
+                    />
                 </div>
 
                 {/* Copy Right */}

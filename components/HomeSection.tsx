@@ -54,9 +54,28 @@ function HomeSection() {
                 {/* a horizontal line */}
                 <div className="h-[1px] w-full bg-slate-200 hidden sm:block" />
                 <div className="flex justify-between items-center space-x-8 lg:px-6">
-                    <VscGithub className="w-5 h-5 text-gray-60 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 lg:w-6 lg:h-6" />
-                    <CiLinkedin className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 lg:w-7 lg:h-7" />
-                    <CiFacebook className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 lg:w-7 lg:h-7" />
+                    <VscGithub
+                        onClick={() =>
+                            window.open("https://github.com/SambathSoth")
+                        }
+                        className="w-5 h-5 text-gray-60 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 lg:w-6 lg:h-6"
+                    />
+                    <CiLinkedin
+                        onClick={() =>
+                            window.open(
+                                "https://www.linkedin.com/in/sambath-soth-10a2a71ba/"
+                            )
+                        }
+                        className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 lg:w-7 lg:h-7"
+                    />
+                    <CiFacebook
+                        onClick={() =>
+                            window.open(
+                                "https://www.facebook.com/sambath.successful/"
+                            )
+                        }
+                        className="w-6 h-6 text-gray-600 hover:text-gray-900 transition-all duration-500 cursor-pointer hover:scale-125 lg:w-7 lg:h-7"
+                    />
                 </div>
             </div>
         </div>

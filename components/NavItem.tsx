@@ -23,6 +23,7 @@ function NavItem({ name, target }: NavItemProps) {
         <div
             className="group flex flex-col justify-center text-sm sm:text-base"
             onClick={() => {
+                document.body.style.overflow = "auto";
                 setCurrentMenu(name);
                 if (name !== "Let's Talk") resetIsOpenMenu();
                 router.push(target);
