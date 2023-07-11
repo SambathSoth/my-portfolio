@@ -4,7 +4,7 @@ This is a personal portfolio project built using Next.js, Recoil, and Tailwind C
 
 ## Overview
 
-The personal portfolio showcases the skills, projects, and information about the project owner, Sambath Soth. It serves as an online resume and a platform to showcase previous work and experiences.
+The personal portfolio showcases the skills, projects, and information about the my projects, Sambath Soth. It serves as an online resume and a platform to showcase previous work and experiences.
 
 ## Technologies Used
 
@@ -27,8 +27,8 @@ The project is hosted on Vercel, and you can access it using the following link:
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
-2. Navigate to the project directory: `cd your-repo`
+1. Clone the repository: `git clone https://github.com/SambathSoth/my-portfolio`
+2. Navigate to the project directory: `cd my-portfolio`
 3. Install dependencies: `yarn install or npm install`
 4. Start the development server: `npm run dev or yarn dev`
 5. Open your browser and visit: `http://localhost:3000`
@@ -45,6 +45,6 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## Contact
 
-For any inquiries or further information, please reach out to Sambath Soth at [sambathsoth@example.com](mailto:soth.sambath19@kit.edu.kh).
+For any inquiries or further information, please reach out to Sambath Soth at [soth.sambath19@kit.edu.kh](mailto:soth.sambath19@kit.edu.kh).
 
 Thank you for visiting the personal portfolio!
