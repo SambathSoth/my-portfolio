@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { isShowContactPopupState } from "@/state/isShowContactPopupState";
+import { isOpenMenuState } from "@/state/isOpenMenuState";
 import { sendContactForm } from "@/lib/api";
 import toast from "react-hot-toast";
 
@@ -23,6 +24,7 @@ function ContactForm() {
     const [isShowContactPopup, setIsShowContactPopup] = useRecoilState(
         isShowContactPopupState
     );
+    const [_, setIsOpenMenu] = useRecoilState(isOpenMenuState);
 
     const onSubmit: SubmitHandler<IFormInputs> = async data => {
         setIsSubmitting(true);
@@ -35,6 +37,7 @@ function ContactForm() {
         } finally {
             setIsSubmitting(false);
             setIsShowContactPopup(false);
+            setIsOpenMenu(false);
             // Clear react-hook-form
             reset();
             // Enable scroll
