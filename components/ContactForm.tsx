@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { isShowContactPopupState } from "@/state/isShowContactPopupState";
+import { sendContactForm } from "@/lib/api";
+import toast from "react-hot-toast";
 
 interface IFormInputs {
     name: string;
@@ -9,17 +12,35 @@ interface IFormInputs {
     message: string;
 }
 
-const onSubmit: SubmitHandler<IFormInputs> = data => console.log(data);
-
 function ContactForm() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const {
         register,
         formState: { errors },
         handleSubmit,
+        reset,
     } = useForm<IFormInputs>();
     const [isShowContactPopup, setIsShowContactPopup] = useRecoilState(
         isShowContactPopupState
     );
+
+    const onSubmit: SubmitHandler<IFormInputs> = async data => {
+        setIsSubmitting(true);
+        try {
+            await sendContactForm(data);
+            toast.success("Your message has been sent successfully!");
+        } catch (error) {
+            console.log(error);
+            toast.error("Something went wrong, please try again later!");
+        } finally {
+            setIsSubmitting(false);
+            setIsShowContactPopup(false);
+            // Clear react-hook-form
+            reset();
+            // Enable scroll
+            https: document.body.style.overflow = "auto";
+        }
+    };
 
     return (
         <div
@@ -160,11 +181,41 @@ function ContactForm() {
 
                     {/* Send Request button */}
                     <div>
-                        <input
-                            type="submit"
-                            value="Send Request"
-                            className="bg-[#4B91F1] text-white px-4 py-2 mt-2 text-sm lg:text-base rounded-md hover:bg-[#1EBBD7] hover:scale-105 transition-all duration-500"
-                        />
+                        {!isSubmitting ? (
+                            <input
+                                type="submit"
+                                value="Send Request"
+                                className="bg-[#4B91F1] text-white px-4 py-[10px] mt-2 text-sm lg:text-base rounded-md hover:bg-[#1EBBD7] hover:scale-105 transition-all duration-500"
+                            />
+                        ) : (
+                            <button
+                                type="button"
+                                className="inline-flex items-center px-4 py-2 mt-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-[#4B91F1] hover:bg-[#1EBBD7] transition ease-in-out duration-150 cursor-not-allowed"
+                            >
+                                <svg
+                                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <circle
+                                        className="opacity-25"
+                                        cx="12"
+                                        cy="12"
+                                        r="10"
+                                        stroke="currentColor"
+                                        strokeWidth="4"
+                                    ></circle>
+                                    <path
+                                        className="opacity-75"
+                                        fill="currentColor"
+                                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                    ></path>
+                                </svg>
+                                Sending...
+                            </button>
+                        )}
+
                         {Object.keys(errors).length > 0 &&
                             !(errors.email?.type === "pattern") && (
                                 <p className="text-red-500 text-sm pt-2">

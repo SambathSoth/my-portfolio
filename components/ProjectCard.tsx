@@ -22,11 +22,6 @@ function ProjectCard({
     image,
     projectLink,
 }: ProjectCardProps) {
-    // useEffect(() => {
-    //     const response = fetch("http://13.214.180.39/api/v1/user/lavy.meng")
-    //         .then(res => res.json())
-    //         .then(data => console.log(data));
-    // }, []);
     const setCurrentMenu = useSetRecoilState(currentMenuState);
     const router = useRouter();
 
