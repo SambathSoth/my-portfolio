@@ -1,5 +1,7 @@
 # Personal Portfolio
 
+![Next.js](https://img.shields.io/badge/Next.js-12.2-blueviolet) ![Recoil](https://img.shields.io/badge/Recoil-0.6.1-orange) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.0.7-blue)
+
 This is a personal portfolio project built using Next.js, Recoil, and Tailwind CSS.
 
 ## Overview
