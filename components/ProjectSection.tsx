@@ -24,6 +24,7 @@ function ProjectSection() {
                         summary={project.summary}
                         image={project.image}
                         projectLink={project.projectLink}
+                        githubLink={project.githubLink}
                     />
                 ))}
             </div>

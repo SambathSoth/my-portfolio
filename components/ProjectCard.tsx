@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useSetRecoilState } from "recoil";
 import { currentMenuState } from "@/state/currentMenuState";
+import GithubLogo from "@/public/images/icons8-github-64.png";
 
 interface ProjectCardProps {
     id: number;
@@ -12,6 +13,7 @@ interface ProjectCardProps {
     image: string;
     summary: string;
     projectLink?: string;
+    githubLink?: string;
 }
 
 function ProjectCard({
@@ -21,6 +23,7 @@ function ProjectCard({
     summary,
     image,
     projectLink,
+    githubLink,
 }: ProjectCardProps) {
     const setCurrentMenu = useSetRecoilState(currentMenuState);
     const router = useRouter();
@@ -61,27 +64,43 @@ function ProjectCard({
                 <p className="text-xs lg:text-sm ml-2 text-gray-600 text-center sm:text-justify">
                     {summary}
                 </p>
-                {/* View Project Button */}
-                <div
-                    onClick={() => {
-                        setCurrentMenu("");
-                        if (projectLink) {
-                            window.open(projectLink, "_blank");
-                        } else {
-                            router.push(`/project/${name}`);
-                        }
-                    }}
-                    className="flex justify-start items-center space-x-2 pt-10"
-                >
-                    <div className="relative group inline-block">
-                        <div className="absolute inset-0 border-[1px] border-gray-400 rounded-md transform translate-x-1 translate-y-1  group-hover:scale-105 transition-transform duration-500"></div>
-                        <button className="relative flex justify-center items-center space-x-7 bg-gradient-to-r from-[#1EBBD7] to-[#4B91F1] text-white pl-4 pr-1 py-[6px] rounded-md hover:scale-105 transition-transform duration-500 sm:py-2">
-                            <span className="text-xs sm:text-sm">
-                                View Project
-                            </span>
-                            <HiChevronRight className="w-5 h-5 animate-bounce-x" />
-                        </button>
+                <div className="flex justify-center items-center pt-10 space-x-6">
+                    {/* View Project Button */}
+                    <div
+                        onClick={() => {
+                            setCurrentMenu("");
+                            if (projectLink) {
+                                window.open(projectLink, "_blank");
+                            } else {
+                                router.push(`/project/${name}`);
+                            }
+                        }}
+                        className="flex justify-start items-center space-x-2"
+                    >
+                        <div className="relative group inline-block">
+                            <div className="absolute inset-0 border-[1px] border-gray-400 rounded-md transform translate-x-1 translate-y-1  group-hover:scale-105 transition-transform duration-500"></div>
+                            <button className="relative flex justify-center items-center space-x-7 bg-gradient-to-r from-[#1EBBD7] to-[#4B91F1] text-white pl-4 pr-1 py-[6px] rounded-md hover:scale-105 transition-transform duration-500 sm:py-2">
+                                <span className="text-xs sm:text-sm">
+                                    View Project
+                                </span>
+                                <HiChevronRight className="w-5 h-5 animate-bounce-x" />
+                            </button>
+                        </div>
                     </div>
+
+                    {/* Github Button */}
+                    {githubLink && (
+                        <Image
+                            onClick={() => {
+                                window.open(githubLink, "_blank");
+                            }}
+                            src={GithubLogo}
+                            width={40}
+                            height={40}
+                            alt="Github Logo"
+                            className="transform transition-transform duration-500 hover:scale-110 hover:opacity-80 cursor-pointer"
+                        />
+                    )}
                 </div>
             </div>
         </div>
