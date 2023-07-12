@@ -29,7 +29,7 @@ The project is hosted on Vercel, and you can access it using the following link:
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/SambathSoth/my-portfolio`
+1. Clone the repository: `git clone https://github.com/SambathSoth/my-portfolio.git`
 2. Navigate to the project directory: `cd my-portfolio`
 3. Install dependencies: `yarn install or npm install`
 4. Start the development server: `npm run dev or yarn dev`
