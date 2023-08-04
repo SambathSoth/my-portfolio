@@ -5,9 +5,17 @@ import { CiLinkedin, CiFacebook } from "react-icons/ci";
 import PrimaryButton from "./PrimaryButton";
 import { useSetRecoilState } from "recoil";
 import { isShowContactPopupState } from "../state/isShowContactPopupState";
+import { useEffect } from "react";
 
 function HomeSection() {
     const setIsShowContactPopup = useSetRecoilState(isShowContactPopupState);
+
+    useEffect(() => {
+        // fetch data from API: http://localhost:8080/api/v1/events/user?username=yean.sovanvathana19@kit.edu.kh
+        fetch("https://api.jolmer.me/api/v1/events/user?username=vathana.sovan")
+            .then(res => res.json())
+            .then(data => console.log(data));
+    });
 
     return (
         <div className="relative bg-slate-100 pb-10 pt-6 shadow-sm px-4 lg:px-4 sm:pb-14 rounded-br-[30px] sm:rounded-br-[50px] lg:pb-20 lg:rounded-br-[70px]">

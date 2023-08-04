@@ -24,7 +24,9 @@ function ProjectSection() {
                         summary={project.summary}
                         image={project.image}
                         projectLink={project.projectLink}
+                        liveDemoLink={project.liveDemoLink}
                         githubLink={project.githubLink}
+                        isMobileScreenshot={project.isMobileScreenshot}
                     />
                 ))}
             </div>

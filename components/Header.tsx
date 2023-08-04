@@ -1,6 +1,7 @@
 import logo from "../public/sambath-soth-logo.svg";
 // import logo from "../public/sambath-soth-white-logo.svg";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { FaArrowRight } from "react-icons/fa";
 import NavItem from "./NavItem";
@@ -10,6 +11,7 @@ import { isOpenMenuState } from "../state/isOpenMenuState";
 import { isShowContactPopupState } from "../state/isShowContactPopupState";
 
 function Header() {
+    const router = useRouter();
     const isOpenMenu = useRecoilValue(isOpenMenuState);
     const setIsShowContactPopup = useSetRecoilState(isShowContactPopupState);
 
@@ -30,6 +32,7 @@ function Header() {
                         width={100}
                         height={100}
                         className={`w-28 sm:w-36 ${isOpenMenu ? "hidden" : ""}`}
+                        onClick={() => router.push("/")}
                     />
 
                     {/* Nav Items */}
@@ -69,7 +72,7 @@ function Header() {
                     <NavItem name="Home" target="/" />
                     <NavItem name="Experience" target="/" />
                     <div onClick={() => setIsShowContactPopup(true)}>
-                        <NavItem name="Let&apos;s Talk" target="/" />
+                        <NavItem name="Let's Talk" target="/" />
                     </div>
                 </div>
             )}

@@ -13,7 +13,9 @@ interface ProjectCardProps {
     image: string;
     summary: string;
     projectLink?: string;
+    liveDemoLink?: string;
     githubLink?: string;
+    isMobileScreenshot?: boolean;
 }
 
 function ProjectCard({
@@ -23,7 +25,9 @@ function ProjectCard({
     summary,
     image,
     projectLink,
+    liveDemoLink,
     githubLink,
+    isMobileScreenshot,
 }: ProjectCardProps) {
     const setCurrentMenu = useSetRecoilState(currentMenuState);
     const router = useRouter();
